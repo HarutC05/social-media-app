@@ -1,17 +1,13 @@
 {
     "name": "server",
     "version": "1.0.0",
-    "main": "index.js",
+    "main": "dist/server.js",
     "type": "module",
     "scripts": {
-        "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
-        "start": "node dist/server.js",
-        "build": "tsc"
+        "dev": "node --loader ts-node/esm --enable-source-maps src/server.ts",
+        "build": "tsc",
+        "start": "node dist/server.js"
     },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "description": "",
     "dependencies": {
         "cors": "^2.8.5",
         "dotenv": "^17.2.3",
